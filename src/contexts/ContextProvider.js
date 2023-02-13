@@ -6,13 +6,19 @@ const initialState = {
   chat: false,
   cart: false,
   userProfile: false,
-  motification: false,
+  notification: false,
 };
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
+  const [isClicked, setIsClicked] = useState(initialState);
+  const [screenSize, setScreenSize] = useState(undefined);
 
-  return <StateContext.Provider value={{ activeMenu, setActiveMenu }}>{children}</StateContext.Provider>;
+  const handleClick = props => {
+    setIsClicked({ ...initialState, [props]: true });
+  };
+
+  return <StateContext.Provider value={{ activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize }}>{children}</StateContext.Provider>;
 };
 
 export const useStateContext = () => useContext(StateContext);
