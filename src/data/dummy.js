@@ -21,7 +21,7 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+//import product8 from './product8.jpg';
 
 export const gridOrderImage = props => (
   <div>
@@ -442,19 +442,25 @@ export const cartData = [
     image: product5,
     name: 'butterscotch ice-cream',
     category: 'Milk product',
-    price: '$250',
+    price: 250,
+    amount: 0,
+    available: 5,
   },
   {
     image: product6,
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
-    price: '$450',
+    price: 450,
+    amount: 0,
+    available: 3,
   },
   {
     image: product7,
     name: 'Red color candy',
     category: 'Food Item',
-    price: '$190',
+    price: 190,
+    amount: 0,
+    available: 11,
   },
 ];
 

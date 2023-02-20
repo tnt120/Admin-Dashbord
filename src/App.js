@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -9,7 +9,6 @@ import { Line, Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Custome
 import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css';
-import { Side } from '@syncfusion/ej2/svg-base';
 
 const App = () => {
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
@@ -76,6 +75,7 @@ const App = () => {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
