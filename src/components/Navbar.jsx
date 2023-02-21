@@ -48,7 +48,7 @@ const Navbar = () => {
 
         <NavButton title="Chat" customFunc={() => handleClick('chat')} color={currentColor} dotColor="#03C9D7" icon={<BsChatLeft />} />
 
-        <NavButton title="Notifications" customFunc={() => handleClick('notification')} color={currentColor} dotColor="#03C9D7" icon={<RiNotification3Line />} />
+        <NavButton title="Notifications" customFunc={() => handleClick('notification')} color={currentColor} dotColor="#fec90f" icon={<RiNotification3Line />} />
 
         <TooltipComponent content="Profile" position="BottomCenter">
           <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg" onClick={() => handleClick('userProfile')}>
